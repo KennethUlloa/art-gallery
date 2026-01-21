@@ -1,0 +1,25 @@
+/**
+ * 
+ * @param {string} image 
+ */
+function getFullpath(image) {
+    if (image.startsWith('http')) {
+        return image;
+    }
+
+    return (import.meta.env.VITE_IMAGE_SERVER || '') + image;
+}
+
+
+/**
+ * 
+ * @param {string} lang 
+ * @returns {{id: number, title: string, description: number, year: number, tags: string[], image: string}[]}
+ */
+export async function getArtworks(lang="en") {
+    const data = await (await fetch(`${import.meta.env.VITE_DATA_SERVER || ''}/data/${lang}.json`)).json();
+    return data.map((artwork) => ({
+        ...artwork,
+        image: getFullpath(artwork.image)
+    }))
+}

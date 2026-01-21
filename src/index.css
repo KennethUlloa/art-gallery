@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Inter', serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.artist-name {
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+.app {
+  padding: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* Masonry layout */
+.masonry {
+  column-count: 1;
+  column-gap: 20px;
+}
+
+.artwork-card {
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.artwork-card.light {
+  background-color: white;
+}
+
+.artwork-card.black {
+  background-color: black;
+}
+
+.artwork-card img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.artwork-card:hover img {
+  transform: scale(1.03);
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  animation: backdropFadeIn 0.3s ease-out forwards;
+}
+
+.modal {
+  background: #111;
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-image.light {
+  background-color: white;
+}
+
+
+.modal-image.dark {
+  background-color: black;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal-info {
+  position: absolute;
+  padding: 30px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-info h2 {
+  margin-top: 0;
+}
+
+.year {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.tags span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.modal-image,
+.modal-info {
+  animation: contentFadeIn 0.6s ease-out forwards;
+}
+
+.close-button {
+  color: white;
+  font-size: 25px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.50);
+  position: absolute;
+  padding: 0.25em;
+  border-radius: 0.25em;
+  z-index: 1000;
+  border: none;
+  right: 15px;
+  top: 15px;
+  transition: background-color .2s ease-in;
+}
+
+.close-button:hover {
+  background-color: rgba(50, 50, 50, 0.85);
+  cursor: pointer;
+}
+
+.close-button svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 600px) {
+  .masonry {
+    column-count: 2;
+    flex-direction: row;
+  }
+
+  .modal-image {
+    flex: 2;
+  }
+  
+}
+
+@media (min-width: 900px) {
+  .masonry {
+    column-count: 3;
+  }
+
+  .modal {
+    flex-direction: row;
+    width: 80%;
+    height: 80%;
+  }
+
+  .modal-info {
+    position: relative;
+    background: none;
+    flex: 1;
+  }
+
+  .close-button {
+    display: none;
+  }
+}
+
+@keyframes backdropFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalExit {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
+  }
+}
+
+.backdrop.enter {
+  animation: backdropFadeIn 0.3s ease-out forwards;
+}
+
+.backdrop.exit {
+  animation: backdropFadeOut 0.25s ease-in forwards;
+}
+
+.modal.enter {
+  animation: modalEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal.exit {
+  animation: modalExit 0.25s ease-in forwards;
+}

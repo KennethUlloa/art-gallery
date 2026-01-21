@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Batman",
+    "image": "/images/batman.webp",
+    "description": "The Dark Knight",
+    "year": 2020,
+    "tags": ["DC", "Cómics"]
+  },
+  {
+    "id": 2,
+    "title": "Superman",
+    "image": "/images/superman.webp",
+    "description": "The man of tomorrow",
+    "year": 2020,
+    "tags": ["DC", "Cómics"]
+  },
+  {
+    "id": 3,
+    "title": "Wonder Woman",
+    "image": "/images/ww.webp",
+    "description": "Prince of Themiscyra",
+    "year": 2020,
+    "tags": ["DC", "Cómics"]
+  },
+  {
+    "id": 4,
+    "title": "Shazam",
+    "image": "/images/shazam.webp",
+    "description": "Champion of the Earth",
+    "year": 2020,
+    "tags": ["DC", "Cómics"]
+  },
+  {
+    "id": 5,
+    "title": "Green Lantern",
+    "image": "/images/greenlantern.webp",
+    "description": "The Esmeral Knight",
+    "year": 2020,
+    "tags": ["DC", "Cómics"],
+    "light": true
+  },
+  {
+    "id": 6,
+    "title": "Flash",
+    "description": "Scarlet Speedster",
+    "image": "/images/flash.webp",
+    "year": 2020,
+    "tags": ["DC", "Cómics"]
+  }
+]

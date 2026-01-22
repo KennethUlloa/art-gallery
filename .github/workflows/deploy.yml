@@ -33,6 +33,9 @@ jobs:
 
       - name: Crear bundle de producción
         run: npm run build
+        env:
+          VITE_IMAGE_SERVER: ${{ vars.VITE_IMAGE_URL }}
+          VITE_DATA_SERVER: ${{ vars.VITE_SERVER_URL }}
 
       - name: Obtener nombre del tag
         id: tag

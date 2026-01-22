@@ -12,8 +12,14 @@ body {
 }
 
 .header {
-  text-align: center;
   margin-bottom: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.55);
+  top: 0;
+  padding: 40px 0;
+  backdrop-filter: blur(8px);
 }
 
 .artist-name {
@@ -41,6 +47,7 @@ body {
 
 /* Masonry layout */
 .masonry {
+  padding-top: 140px;
   column-count: 1;
   column-gap: 20px;
 }
@@ -91,6 +98,7 @@ body {
   z-index: 1000;
 
   animation: backdropFadeIn 0.3s ease-out forwards;
+  backdrop-filter: blur(4px);
 }
 
 .modal {
@@ -131,6 +139,19 @@ body {
   bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.55);
+  text-shadow: 0 5px 6px rgba(0, 0, 0, 0.55);
+}
+
+.modal-info.closed {
+  top: 100%
+}
+
+.toggle-button {
+  right: 15px;
+  bottom: 100%;
+  z-index: 10000;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .modal-info h2 {
@@ -154,7 +175,7 @@ body {
   animation: contentFadeIn 0.6s ease-out forwards;
 }
 
-.close-button {
+.icon-button {
   color: white;
   font-size: 25px;
   display: flex;
@@ -164,17 +185,20 @@ body {
   border-radius: 0.25em;
   z-index: 1000;
   border: none;
-  right: 15px;
-  top: 15px;
   transition: background-color .2s ease-in;
 }
 
-.close-button:hover {
+.close-button {
+  right: 15px;
+  top: 15px;
+}
+
+.icon-button:hover {
   background-color: rgba(50, 50, 50, 0.85);
   cursor: pointer;
 }
 
-.close-button svg {
+.icon-button svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
@@ -218,10 +242,19 @@ body {
     position: relative;
     background: none;
     flex: 1;
+    transition: none;
   }
 
   .close-button {
     display: none;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .modal-info.closed {
+    top: initial;
   }
 }
 
@@ -259,4 +292,13 @@ body {
 
 .modal.exit {
   animation: modalExit 0.25s ease-in forwards;
+}
+
+.lang-selector {
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  right: 50px;
+  color-scheme: dark;
+  width: 70px;
 }

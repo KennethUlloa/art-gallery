@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
-import { getArtworks } from "../data/loader";
+import { useState } from "react";
 import ArtworkCard from "./ArtworkCard";
 import ArtworkModal from "./ArtworkModal";
 
-export default function Gallery() {
+export default function Gallery({ artworks }) {
   const [selectedArtwork, setSelectedArtwork] = useState(null);
-  const [artworks, setArtworks] = useState([]);
-
-  useEffect(() => {
-    getArtworks().then((data) => setArtworks(data));
-  }, []);
 
   return (
     <>

@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Xmark from "../assets/xmark.svg?react"
+import ChevronUp from "../assets/chevronup.svg?react"
+import ChevronDown from "../assets/chevrondown.svg?react"
 
 export default function ArtworkModal({ artwork, onClose }) {
   const [isClosing, setIsClosing] = useState(false);
+  const [openInfo, setOpenInfo] = useState(true);
 
   const handleClose = () => {
     setIsClosing(true);
@@ -18,7 +21,7 @@ export default function ArtworkModal({ artwork, onClose }) {
         className={`modal ${isClosing ? "exit" : "enter"}`}
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="close-button" onClick={() => handleClose()}>
+        <button className="icon-button close-button" onClick={() => handleClose()}>
             <Xmark />
         </button>
         <div
@@ -29,7 +32,12 @@ export default function ArtworkModal({ artwork, onClose }) {
           <img src={artwork.image} alt={artwork.title} />
         </div>
 
-        <div className="modal-info">
+        <div className={`modal-info ${openInfo ? '': 'closed'}`}>
+          <button className="icon-button toggle-button" onClick={() => setOpenInfo(!openInfo)}>
+            {
+              openInfo ? (<ChevronUp />) : (<ChevronDown />)
+            }
+          </button>
           <h2>{artwork.title}</h2>
           <p className="year">{artwork.year}</p>
           <p>{artwork.description}</p>

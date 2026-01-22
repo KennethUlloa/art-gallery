@@ -36,6 +36,7 @@ jobs:
         env:
           VITE_IMAGE_SERVER: ${{ vars.VITE_IMAGE_URL }}
           VITE_DATA_SERVER: ${{ vars.VITE_SERVER_URL }}
+          VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
 
       - name: Obtener nombre del tag
         id: tag

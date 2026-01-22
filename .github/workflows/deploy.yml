@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
 
       - name: Instalar dependencias
@@ -39,7 +39,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Cambia a ./dist si tu proyecto usa Vite
+          publish_dir: ./dist  # Cambia a ./dist si tu proyecto usa Vite
           publish_branch: production  # Rama donde se desplegará el bundle
           commit_message: 'Deploy ${{ steps.tag.outputs.TAG_NAME }}'
           user_name: 'github-actions[bot]'
@@ -50,7 +50,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            ./build/**/*
+            ./dist/**/*
           body: |
             ## Cambios en ${{ steps.tag.outputs.TAG_NAME }}
             

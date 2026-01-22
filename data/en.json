@@ -1,0 +1,182 @@
+{
+  "title": "Kenneth Ulloa",
+  "subtitle": "Drawer/Illustrator",
+  "items": [
+    {
+    "id": 1,
+    "title": "Vigilante Batman",
+    "image": "/batman_pose.webp",
+    "description": "The Dark Knight watches over Gotham City from the heights. Digital art made with CS Paint.",
+    "year": 2020,
+    "tags": ["DC", "Comics", "Batman", "CS Paint", "Digital"]
+  },
+  {
+    "id": 2,
+    "title": "Black Adam",
+    "image": "/black_adam.webp",
+    "description": "Teth Adam: the champion of Kahndaq, wields the magical power granted by ancient wizards in order to protect his people. However, he chose his own path, a darker one than the wizards believed.",
+    "year": 2022,
+    "tags": ["DC", "Comics", "Black Adam", "Digital", "Photoshop"]
+  },
+  {
+    "id": 3,
+    "title": "Batman (Comic panels)",
+    "image": "/batman_comic_strip.webp",
+    "description": "Batman patrolling the streets of Gotham City. Storytelling and landscape practice.",
+    "year": 2019,
+    "tags": ["DC", "Comics", "Storytelling", "Lineart", "Classic drawing"]
+  },
+  {
+    "id": 4,
+    "title": "Shazam",
+    "image": "/shazam.webp",
+    "description": "Billy Batson transforms into Shazam, the magical hero and defender of the Rock of Eternity. When he says the word \"Shazam!\" he gains the abilities and powers of ancient deities.",
+    "year": 2018,
+    "tags": ["DC", "Comics", "Shazam", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 5,
+    "title": "Darkseid (lineart)",
+    "image": "/darkseid.webp",
+    "description": "Darkseid, the tyrannical ruler of Apokolips. An intergalactic conqueror who seeks the Anti-Life Equation to rule the universe.",
+    "year": 2019,
+    "tags": ["DC", "Comics", "Darkseid", "Digital", "Linework"]
+  },
+  {
+    "id": 6,
+    "title": "Knights of Gotham",
+    "description": "A battle of ideals represented by the Dark Knight and the Clown Prince of Crime.",
+    "image": "/gotham_knights.webp",
+    "year": 2019,
+    "tags": ["DC", "Comics", "Batman", "Joker", "Digital", "Linework"]
+  },
+  {
+    "id": 7,
+    "title": "Doctor Octopus",
+    "description": "Otto Octavius (Doctor Octopus, Doc Ock), after an accident, a mechanical harness becomes permanently attached to his body and controls his brilliant mind, turning him into a criminal.",
+    "image": "/doc_oc.webp",
+    "year": 2021,
+    "tags": ["Marvel", "Comics", "Doc Ock", "Doctor Octopus", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 8,
+    "title": "Iron Man (classic)",
+    "description": "Tony Stark, a genius, philanthropist, and billionaire who seeks to atone for the damage he caused by manufacturing weapons and puts his talents to better use by protecting the innocent.",
+    "image": "/classic_ironman.webp",
+    "year": 2022,
+    "tags": ["Marvel", "Comics", "Iron Man", "Digital"]
+  },
+  {
+    "id": 9,
+    "title": "Judge Dredd",
+    "description": "Dredd, a police officer, judge, and executioner in a dystopian future devastated by radiation.",
+    "image": "/judge_dredd.webp",
+    "year": 2021,
+    "tags": ["Independent", "Comics", "Judge Dredd", "Digital"]
+  },
+  {
+    "id": 10,
+    "title": "Darkseid (color)",
+    "description": "Darkseid, an ancient being who seeks to rule the cosmos using his army and Omega powers.",
+    "image": "/darkseid_color.webp",
+    "year": 2021,
+    "tags": ["DC", "Comics", "Darkseid", "Digital"]
+  },
+  {
+    "id": 11,
+    "title": "Ocean Master",
+    "description": "Orm, prince of Atlantis and enemy of Aquaman. He seeks to seize the throne by any means and establish his tyrannical rule.",
+    "image": "/ocean_master.webp",
+    "year": 2020,
+    "tags": ["DC", "Comics", "Ocean Master", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 12,
+    "title": "Superman",
+    "description": "Clark Kent (or Kal-El), the last son of the planet Krypton. Adopted by Martha and Jonathan Kent, he grows up to become Superman, the hero and defender of the weak.",
+    "image": "/superman.webp",
+    "year": 2020,
+    "tags": ["DC", "Comics", "Superman", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 13,
+    "title": "Supergirl",
+    "description": "Kara Zor-El, survivor of the city of Argo (Krypton). After witnessing the destruction of her home city, she is sent to Earth to look after her cousin Kal-El. A detour causes her to arrive later, finding him already become Superman.",
+    "image": "/supergirl.webp",
+    "year": 2021,
+    "tags": ["DC", "Comics", "Supergirl", "Digital"]
+  },
+  {
+    "id": 14,
+    "title": "Wonder Woman",
+    "description": "Diana Prince, princess of the Amazons. On the hidden island of Themyscira, home of the Amazons, she grows up training to become the defender of her people's ideals and bring peace to the world of men.",
+    "image": "/wonder_woman.webp",
+    "year": 2020,
+    "tags": ["DC", "Comics", "Wonder Woman", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 15,
+    "title": "Batman",
+    "description": "Bruce Wayne decides to turn the death of his parents at the hands of a thief into the driving force of his fight against crime and corruption in Gotham City.",
+    "image": "/the_batman.webp",
+    "year": 2022,
+    "tags": ["DC", "Comics", "The Batman", "Digital"]
+  },
+  {
+    "id": 16,
+    "title": "Wolverine",
+    "description": "James Howlett (Logan), a mutant with regeneration and an adamantium skeleton. A natural hunter with a bad attitude and a good heart.",
+    "image": "/wolverine.webp",
+    "year": 2020,
+    "tags": ["Marvel", "Comics", "Wolverine", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 17,
+    "title": "Christmas Batman",
+    "description": "Even the Dark Knight can enjoy a celebration of peace and good deeds.",
+    "image": "/xmas_batman.webp",
+    "year": 2020,
+    "tags": ["DC", "Comics", "Batman", "Digital"]
+  },
+  {
+    "id": 18,
+    "title": "Retrospective",
+    "description": "When everything has passed, what do we have left?",
+    "image": "/old_man.webp",
+    "year": 2020,
+    "tags": ["Digital", "Hand drawing", "Scene", "Conceptual"]
+  },
+  {
+    "id": 19,
+    "title": "An open mind",
+    "description": "A universe of possibilities within every person. What is inside yours?",
+    "image": "/open_mind.webp",
+    "year": 2016,
+    "tags": ["Digital", "Hand drawing", "Scene", "Conceptual"]
+  },
+  {
+    "id": 20,
+    "title": "Skeletor and He-Man",
+    "description": "Skeletor finally manages to get rid of He-Man, though not in the best way. The cure was worse than the disease.",
+    "image": "/skeletor_baby.webp",
+    "year": 2019,
+    "tags": ["He-Man", "Digital", "Hand drawing", "TV series"]
+  },
+  {
+    "id": 21,
+    "title": "Medieval princess",
+    "description": "A glimpse into what the past and history could have been.",
+    "image": "/princess.webp",
+    "year": 2019,
+    "tags": ["Princess", "Middle Ages", "Digital", "Hand drawing"]
+  },
+  {
+    "id": 22,
+    "title": "Motorcyclist",
+    "description": "A girl, a motorcycle, and a road.",
+    "image": "/motorcycle_girl.webp",
+    "year": 2018,
+    "tags": ["Digital", "Hand drawing", "Motorcycle", "Woman"]
+  }
+  ]
+}

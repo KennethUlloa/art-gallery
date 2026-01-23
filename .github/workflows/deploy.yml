@@ -31,16 +31,17 @@ jobs:
         run: npm test --if-present
         continue-on-error: true
 
+      - name: Obtener nombre del tag
+        id: tag
+        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
       - name: Crear bundle de producción
         run: npm run build
         env:
           VITE_IMAGE_SERVER: ${{ vars.VITE_IMAGE_URL }}
           VITE_DATA_SERVER: ${{ vars.VITE_SERVER_URL }}
           VITE_BASE_URL: ${{ vars.VITE_BASE_URL }}
-
-      - name: Obtener nombre del tag
-        id: tag
-        run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          VITE_VERSION: ${{ steps.tag.outputs.TAG_NAME }} 
 
       - name: Deploy a rama de producción
         uses: peaceiris/actions-gh-pages@v3

@@ -5,5 +5,9 @@ import svgr from 'vite-plugin-svgr'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: process.env.VITE_BASE_URL
+  // eslint-disable-next-line no-undef
+  base: process.env.VITE_BASE_URL,
+  build: {
+    assetsDir: 'assets/'+process.env.VITE_VERSION
+  }
 })

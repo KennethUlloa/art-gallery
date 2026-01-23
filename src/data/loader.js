@@ -20,7 +20,6 @@ function getFullpath(image) {
  * }}
  */
 export async function getData(lang="en") {
-    console.log(import.meta.env);
     const data = await (await fetch(`${import.meta.env.VITE_DATA_SERVER || ''}/data/${lang}.json`)).json();
     data.items = data.items.map((artwork) => ({
         ...artwork,

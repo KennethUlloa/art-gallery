@@ -6,11 +6,11 @@ import { getData } from "./data/loader";
 const langs = [
   {
     value: 'es',
-    label: '🇲🇽ES'
+    label: 'ES',
   },
   {
     value: 'en',
-    label: '🇬🇧EN'
+    label: 'EN'
   }
 ];
 
@@ -21,7 +21,6 @@ export default function App() {
   useEffect(() => {
       getData(lang.value).then((data) => {
         setData(data);
-        document.title = data.title;
       });
     }, [lang]);
 
@@ -39,12 +38,16 @@ export default function App() {
         }}>
         {
           langs.map((lang) => (
-            <option key={lang.value} value={lang.value}>{lang.label}</option>
+            <option key={lang.value} value={lang.value} className={`option option-${lang.value}`}>
+              {lang.label}
+            </option>
           ))
         }
       </select>
       </header>
+      <div className="container">
       <Gallery artworks={data.items ?? []} />
+      </div>
     </div>
   );
 }

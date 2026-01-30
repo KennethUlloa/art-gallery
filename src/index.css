@@ -19,8 +19,10 @@ body {
   z-index: 50;
   background: rgba(0, 0, 0, 0.55);
   top: 0;
-  padding: 40px 0;
+  padding: 20px;
+  padding-top: 40px;
   backdrop-filter: blur(8px);
+  font-size: 0.8rem;
 }
 
 .artist-name {
@@ -36,7 +38,7 @@ body {
   margin-top: 10px;
 }
 
-.app {
+.container {
   padding: 40px;
 }
 
@@ -205,6 +207,20 @@ body {
   fill: currentColor;
 }
 
+.option {
+  position: relative;
+  display: flex;
+}
+
+.option-en::after {
+  position: absolute;
+  content: "es";
+  height: 16px;
+  width: 16px;
+  right: 2px;
+  background-color: red;
+}
+
 @keyframes contentFadeIn {
   from {
     opacity: 0;
@@ -224,6 +240,10 @@ body {
 
   .modal-image {
     flex: 2;
+  }
+
+  .header {
+    padding: 40px 20px;
   }
   
 }
